@@ -19,4 +19,4 @@ This is the about me project Day 1.
 * continue to work on understanding of js. 
 * work on image upload in .md files! can't get image to work propperly for some reason. 
 * what is the file listed as LICENCE on the file set up? Think I missed this and can't find it in class demo repo. 
-
+* look at switch way to do conditions that John demoed today. 
