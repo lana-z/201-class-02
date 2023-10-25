@@ -1,11 +1,42 @@
+* {
+    border: 1px solid black;
+}
 
 header{
-    color: 	#585858;
     background-color: #f3cac1;
+    color: 	#585858;
+    font-size: 50px;
+    padding: 30px;
+    text-align: left;
+}
 
+img{
+    height: 200px;
+    margin: 30px;
 }
 
 h2{
+    background-color: grey;
     color: #f3cac1;
-    background-color: 	#888888;;
+    font-size: 20px;
+    margin: 10px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+p{
+    padding-left: 30px;
+    margin: 5px;
+}
+
+ul{ 
+    list-style-type:disc;
+    margin: 10px;
+    padding-left: 60px;
+}
+
+li{
+    margin: 5px;
 }

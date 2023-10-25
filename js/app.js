@@ -7,8 +7,12 @@ console.log("Hello")
 
 alert("Hello! This website is about me. Glad you stopped by. Here's some trivia about me. Let's see how you do.");
 
-let workTJ = prompt("Do I work at Trader Joe's?");
-workTJ = workTJ.toLowerCase();
+//let workTJ = userAccept.substring(0, 1).toLowerCase();
+//same as let workTJ = workTJ.charAt(0);
+//also can use str.startsWith() method https://www.geeksforgeeks.org/javascript-string-startswith-method/
+
+let workTJ = prompt("Do I work at Trader Joe's?").toLowerCase();
+
 
 if (workTJ === "no") {
    //console.log(That's correct!);
@@ -18,8 +22,7 @@ if (workTJ === "no") {
     alert("Nope.");
 }
 
-let liveNe = prompt("Do I live in Nebraska?");
-liveNe = liveNe.toLowerCase();
+let liveNe = prompt("Do I live in Nebraska?").toLowerCase();
 
 if (liveNe === "no") {
         //console.log("That's correct!");
@@ -29,8 +32,7 @@ if (liveNe === "no") {
     alert("Whoops, wrong answer. I used to though!");
 }
 
-let iHaveKids = prompt("Do I have kids?");
-iHaveKids = iHaveKids.toLowerCase();
+let iHaveKids = prompt("Do I have kids?").toLowerCase();
 
 if (iHaveKids === "yes") {
     //console.log("That's correct!");
@@ -40,8 +42,7 @@ if (iHaveKids === "yes") {
     alert("Shoot. Actually I have two teenage sons.");
 }
 
-let inCF = prompt ("Am I in a Code Fellows course?");
-inCF = inCF.toLowerCase();
+let inCF = prompt ("Am I in a Code Fellows course?").toLowerCase();
 
 if (inCF === "yes") {
     //console.log("That's correct!")
@@ -51,8 +52,7 @@ if (inCF === "yes") {
     alert("Nope, actually I am.");
 }
 
-let learnCybSec = prompt("Do I want to learn cyber security at CF?")
-learnCybSec = learnCybSec.toLowerCase();
+let learnCybSec = prompt("Do I want to learn cyber security at CF?").toLowerCase();
 
 if (learnCybSec === "no") {
     //console.log("That's correct!")
