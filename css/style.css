@@ -25,14 +25,21 @@ h2{
 
 
 p{
-    padding-left: 30px;
     margin: 5px;
+    padding-left: 30px;
+
 }
 
 ul{ 
     list-style-type:disc;
     margin: 10px;
     padding-left: 60px;
+}
+
+ol{ 
+    margin: 10px;
+    padding-left: 60px;
+    list-style-type: decimal;
 }
 
 li{
