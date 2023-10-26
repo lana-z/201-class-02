@@ -11,6 +11,7 @@ alert("Hello! This website is about me. Glad you stopped by. Here's some trivia.
 //same as let workSE = workSE.charAt(0);
 //also can use str.startsWith() method https://www.geeksforgeeks.org/javascript-string-startswith-method/
 
+
 let userScore = 0;
 let workSE = prompt("Do I work with startups?").toLowerCase();
 
@@ -25,6 +26,8 @@ if (workSE === "yes") {
     //console.log("Nope.");
     alert("Nope.");
 }
+
+function 
 
 let liveNe = prompt("Do I live in Nebraska?").toLowerCase();
 

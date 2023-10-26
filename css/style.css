@@ -45,3 +45,9 @@ ol{
 li{
     margin: 5px;
 }
+
+main{
+    margin: 10px auto;
+    padding: 16px;
+    max-width: 960px;
+}
