@@ -19,6 +19,8 @@ if (workSE === "yes") {
    //console.log(That's correct!);
     alert("That's correct!");
     userScore++;
+} else if (userAnswer === "") {
+    alert("Please enter an answer.");
 } else {
     //console.log("Nope.");
     alert("Nope.");
@@ -30,6 +32,8 @@ if (liveNe === "no") {
         //console.log("That's correct!");
     alert("That's correct!");
     userScore++;
+} else if (userAnswer === "") {
+    alert("Please enter an answer.");
 } else {
     //console.log("Whoops, wrong answer. I used to though.);
     alert("Whoops, wrong answer. I used to though!");
@@ -41,6 +45,8 @@ if (iHaveKids === "yes") {
     //console.log("That's correct!");
     alert("That's correct!");
     userScore++;
+} else if (userAnswer === "") {
+    alert("Please enter an answer.");
 } else {
     //console.log("Shoot. Actually I have two teengage sons.");
     alert("Shoot. Actually I have two teenage sons.");
@@ -52,6 +58,8 @@ if (inCF === "yes") {
     //console.log("That's correct!")
     alert("That's correct!");
     userScore++;
+} else if (userAnswer === "") {
+    alert("Please enter an answer.");
 } else {
     //console.log("Nope, actually I am.")
     alert("Nope, actually I am.");
@@ -63,6 +71,8 @@ if (learnCybSec === "no") {
     //console.log("That's correct!")
     alert("That's correct!");
     userScore++;
+} else if (userAnswer === "") {
+    alert("Please enter an answer.");
 } else {
     //console.log("Close, but I'm learning software development, not cyber security.")
     alert("Close, but I'm learning software development, not cyber security.");
@@ -97,8 +107,10 @@ for (let i = 1; i <= numGuesses; i++) {
         alert("That's correct!");
         userScore++;
         break;
+    } else if (userAnswer === "") {
+        alert("Please enter an answer.");
 
-    }   else {
+    } else {
         alert("Nope.");
     }
 }
@@ -118,8 +130,10 @@ for (let i = 1; i <= numGuessesFavC; i++){
             alert("Yes, you got one of them! All ten are Germany, Ireland, Barbados, South Africa, France, Vietnam, Scotland, Turkey, Jordan and Spain.");
             guess = true;
             userScore++;
-            alert("Thanks for playing 'About me' trivia! Your score is " + userScore + ".")
+    }   else if (userAnswer === "") {
+            alert("Please enter an answer.");
             break;
+            alert("Thanks for playing 'About me' trivia! Your score is " + userScore + ".")
 
     }   else {
             alert("No, that's not one of them.")
@@ -144,5 +158,5 @@ for (let i = 0; i <= numGuessesFavC.length; i++){
 //2.
 const userName = prompt("Great. That's it for the trivia on me. Now, what's your name?");
 alert("Welcome to my site, " + userName + ".");
-document.write("All that hard work on the prompts paid off, " + userName + ". Here my About Me page.");
+document.write("All that hard work on the prompts paid off, " + userName + ". Here is my About Me page.");
 
