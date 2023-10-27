@@ -8,15 +8,74 @@ console.log("Hello")
 
 alert("Hello! This website is about me. Glad you stopped by. Here's some trivia. Let's see how you do.");
 
+const numCountries = 22;
+
+const favCountries = ["germany", "ireland", "barbados", "south africa", "france", "vietnam", "scotland", "turkey", "jordan", "spain"];
+
+
+function askQuestion(question, rightAnswer, nopeMessage) {
+    const userAnswer = prompt(question).toLowerCase();
+    if (userAnswer === rightAnswer) {
+        alert("That's correct!");
+        userScore++;
+    } else {
+        alert(nopeMessage);
+    }
+}
+
+askQuestion("Do I work with startups?", "yes", "Nope.");
+askQuestion("Do I live in Nebraska?", "no", "Whoops, wrong answer. I used to though.");
+askQuestion("Do I have kids?", "yes", "Shoot. Actually, I have two teenage sons.");
+askQuestion("Am I in a Code Fellows course?", "yes", "Nope, actually I am.");
+askQuestion("Do I want to learn cyber security at CF?", "no", "Close, but I'm learning software development, not cyber security.");
+
+
+alert(`You've gotten ${userScore} questions right.`);
+
+
+function askNum(question, rightAnswer) {
+    const userGuess = parseInt(prompt(question));
+    if (userGuess === rightAnswer) {
+        alert("That's correct!");
+        userScore++;
+    } else {
+        alert("Nope.");
+    }
+}
+askNum("Guess how many different countries I've coached entrepreneurs from.", numCountries);
+
+alert(`You've gotten ${userScore} questions right.`);
+
+
+function askCountries(question, rightAnswer, countries) {
+    const userAnswer = prompt(`${question} (${countries.join('/')})`).toLowerCase();
+    if (userAnswer === rightAnswer) {
+        alert("That's correct!");
+        userScore++;
+    } else {
+        alert("Nope.");
+    }
+}
+askCountries("Guess one of my Top 10 favorite countries that I've traveled to and worked in.", "ireland", favCountries);
+
+alert(`You've gotten ${userScore} questions right.`);
+
+
+
+
+
+/* ======================================================================================== */
+
 //let workSE = userAccept.substring(0, 1).toLowerCase();
 //same as let workSE = workSE.charAt(0);
 //also can use str.startsWith() method https://www.geeksforgeeks.org/javascript-string-startswith-method/
 
+/*
 
 let userScore = 0;
 let workSE = prompt("Do I work with startups?").toLowerCase();
 
-
+functionWorkSE(){
 if (workSE === "yes") {
    //console.log(That's correct!);
     alert("That's correct!");
@@ -27,7 +86,8 @@ if (workSE === "yes") {
     //console.log("Nope.");
     alert("Nope.");
 }
-
+}
+functionWorkSE();
 
 let liveNe = prompt("Do I live in Nebraska?").toLowerCase();
 
@@ -101,7 +161,7 @@ if (userGuess === numCountries) {
         alert("Nope.")
 }
 */
-
+/*
 for (let i = 1; i <= numGuesses; i++) {
     let userGuessNum = prompt("Guess how many different countries I've coached entrepreneurs from.")
     userGuessNum = Number(userGuessNum);
