@@ -4,7 +4,7 @@
 
 console.log("Hello")
 
-//1. 
+//1.
 
 alert("Hello! This website is about me. Glad you stopped by. Here's some trivia. Let's see how you do.");
 
@@ -28,7 +28,6 @@ if (workSE === "yes") {
     alert("Nope.");
 }
 
-function 
 
 let liveNe = prompt("Do I live in Nebraska?").toLowerCase();
 
@@ -87,7 +86,7 @@ if (learnCybSec === "no") {
 //Lab Class 03
 
 
-let numCountries = 22; 
+let numCountries = 22;
 let numGuesses = 4;
 
 
@@ -96,7 +95,7 @@ let numGuesses = 4;
 let userGuess = prompt("Finally, guess how many different countries I've coached entrepreneurs from.").Number(userGuess);
 
 if (userGuess === numCountries) {
-    
+
     alert("That's correct!")
   }  else {
         alert("Nope.")
@@ -106,7 +105,7 @@ if (userGuess === numCountries) {
 for (let i = 1; i <= numGuesses; i++) {
     let userGuessNum = prompt("Guess how many different countries I've coached entrepreneurs from.")
     userGuessNum = Number(userGuessNum);
-    
+
         if (userGuessNum === numCountries) {
         alert("That's correct!");
         userScore++;
@@ -150,7 +149,7 @@ for (let i = 1; i <= numGuessesFavC; i++){
     }
 
 
-    
+
 /*
 for (let i = 0; i <= numGuessesFavC.length; i++){
     alert("All ten are Germany, Ireland, Barbados, South Africa, France, Vietnam, Scotland, Turkey, Jordan and Spain.")
