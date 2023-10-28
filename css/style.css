@@ -30,13 +30,13 @@ p{
 
 }
 
-ul{ 
+ul{
     list-style-type:disc;
     margin: 10px;
     padding-left: 60px;
 }
 
-ol{ 
+ol{
     margin: 10px;
     padding-left: 60px;
     list-style-type: decimal;
@@ -50,4 +50,23 @@ main{
     margin: 10px auto;
     padding: 16px;
     max-width: 960px;
+    color: #202020;
+
+}
+
+main a{
+  color: #202020;
+}
+
+
+footer{
+  background-color: #f3cac1;
+  color: 	#585858;
+  font-size: 16px;
+  padding: 30px;
+  text-align: left;
+}
+
+footer a{
+  color: 	#585858;
 }
