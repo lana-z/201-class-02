@@ -11,7 +11,7 @@ alert("Hello! This website is about me. Glad you stopped by. Here's some trivia.
 const numCountries = 22;
 
 const favCountries = ["germany", "ireland", "barbados", "south africa", "france", "vietnam", "scotland", "turkey", "jordan", "spain"];
-
+let userScore = 0
 
 function askQuestion(question, rightAnswer, nopeMessage) {
     const userAnswer = prompt(question).toLowerCase();
