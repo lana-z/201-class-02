@@ -1,28 +1,27 @@
 
 'use strict';
- // EKOW'S COMMENT
 
 console.log("Hello")
 
 //1.
 
 alert("Hello! This website is about me. Glad you stopped by. Here's some trivia. Let's see how you do.");
+alert("Answer the following questions with Yes or No.");
 
-const numCountries = 22;
-
-const favCountries = ["germany", "ireland", "barbados", "south africa", "france", "vietnam", "scotland", "turkey", "jordan", "spain"];
 let userScore = 0
 
-function askQuestion(question, rightAnswer, nopeMessage) {
+function askQuestion(question, rightMessage, nopeMessage) {
     const userAnswer = prompt(question).toLowerCase();
-    if (userAnswer === rightAnswer) {
+    if (userAnswer === "") {
+      alert("Please enter Yes or No.");
+    } else if (userAnswer === rightMessage) {
         alert("That's correct!");
         userScore++;
     } else {
         alert(nopeMessage);
     }
 }
-
+// How do I make it stop user if user doesn't give an answer
 askQuestion("Do I work with startups?", "yes", "Nope.");
 askQuestion("Do I live in Nebraska?", "no", "Whoops, wrong answer. I used to though.");
 askQuestion("Do I have kids?", "yes", "Shoot. Actually, I have two teenage sons.");
@@ -30,195 +29,54 @@ askQuestion("Am I in a Code Fellows course?", "yes", "Nope, actually I am.");
 askQuestion("Do I want to learn cyber security at CF?", "no", "Close, but I'm learning software development, not cyber security.");
 
 
-alert(`You've gotten ${userScore} questions right.`);
-
-
-function askNum(question, rightAnswer) {
-    const userGuess = parseInt(prompt(question));
-    if (userGuess === rightAnswer) {
-        alert("That's correct!");
-        userScore++;
-    } else {
-        alert("Nope.");
-    }
-}
-askNum("Guess how many different countries I've coached entrepreneurs from.", numCountries);
-
-alert(`You've gotten ${userScore} questions right.`);
-
-
-function askCountries(question, rightAnswer, countries) {
-    const userAnswer = prompt(`${question} (${countries.join('/')})`).toLowerCase();
-    if (userAnswer === rightAnswer) {
-        alert("That's correct!");
-        userScore++;
-    } else {
-        alert("Nope.");
-    }
-}
-askCountries("Guess one of my Top 10 favorite countries that I've traveled to and worked in.", "ireland", favCountries);
-
-alert(`You've gotten ${userScore} questions right.`);
-
-
-
-
-
-/* ======================================================================================== */
-
-//let workSE = userAccept.substring(0, 1).toLowerCase();
-//same as let workSE = workSE.charAt(0);
-//also can use str.startsWith() method https://www.geeksforgeeks.org/javascript-string-startswith-method/
-
-/*
-
-let userScore = 0;
-let workSE = prompt("Do I work with startups?").toLowerCase();
-
-functionWorkSE(){
-if (workSE === "yes") {
-   //console.log(That's correct!);
-    alert("That's correct!");
-    userScore++;
-//} else if (userAnswer === "") {
-  //  alert("Please enter an answer.");
-} else {
-    //console.log("Nope.");
-    alert("Nope.");
-}
-}
-functionWorkSE();
-
-let liveNe = prompt("Do I live in Nebraska?").toLowerCase();
-
-if (liveNe === "no") {
-        //console.log("That's correct!");
-    alert("That's correct!");
-    userScore++;
-//} else if (userAnswer === "") {
-  //  alert("Please enter an answer.");
-} else {
-    //console.log("Whoops, wrong answer. I used to though.);
-    alert("Whoops, wrong answer. I used to though!");
-}
-
-let iHaveKids = prompt("Do I have kids?").toLowerCase();
-
-if (iHaveKids === "yes") {
-    //console.log("That's correct!");
-    alert("That's correct!");
-    userScore++;
-//} else if (userAnswer === "") {
-  //  alert("Please enter an answer.");
-} else {
-    //console.log("Shoot. Actually I have two teengage sons.");
-    alert("Shoot. Actually I have two teenage sons.");
-}
-
-let inCF = prompt ("Am I in a Code Fellows course?").toLowerCase();
-
-if (inCF === "yes") {
-    //console.log("That's correct!")
-    alert("That's correct!");
-    userScore++;
-//} else if (userAnswer === "") {
-  //  alert("Please enter an answer.");
-} else {
-    //console.log("Nope, actually I am.")
-    alert("Nope, actually I am.");
-}
-
-let learnCybSec = prompt("Do I want to learn cyber security at CF?").toLowerCase();
-
-if (learnCybSec === "no") {
-    //console.log("That's correct!")
-    alert("That's correct!");
-    userScore++;
-//} else if (userAnswer === "") {
-  //  alert("Please enter an answer.");
-} else {
-    //console.log("Close, but I'm learning software development, not cyber security.")
-    alert("Close, but I'm learning software development, not cyber security.");
-}
-
-
-
-//Lab Class 03
-
-
-let numCountries = 22;
-let numGuesses = 4;
-
-
-/*
-
-let userGuess = prompt("Finally, guess how many different countries I've coached entrepreneurs from.").Number(userGuess);
-
-if (userGuess === numCountries) {
-
-    alert("That's correct!")
-  }  else {
-        alert("Nope.")
-}
-*/
-/*
-for (let i = 1; i <= numGuesses; i++) {
-    let userGuessNum = prompt("Guess how many different countries I've coached entrepreneurs from.")
-    userGuessNum = Number(userGuessNum);
-
-        if (userGuessNum === numCountries) {
-        alert("That's correct!");
-        userScore++;
-        break;
-//    } else if (userAnswer === "") {
-  //      alert("Please enter an answer.");
-
-    } else {
-        alert("Nope.");
-    }
-}
-
-
-let favC = ["Germany", "Ireland", "Barbados", "South Africa", "France", "Vietnam", "Scotland", "Turkey", "Jordan", "Spain"];
-let numGuessesFavC = 6;
-let guess = false;
-
-
-
-for (let i = 1; i <= numGuessesFavC; i++){
-    let userGuessFavC = prompt("Guess one of my Top 10 favorite countries that I've traveled to and worked in.").normalize()
-
-//chatGPT help here - didn't figure out how not to use .includes
-    if (favC.includes(userGuessFavC)) {
-            alert("Yes, you got one of them! All ten are Germany, Ireland, Barbados, South Africa, France, Vietnam, Scotland, Turkey, Jordan and Spain.");
-            guess = true;
-            userScore++;
-            alert("Thanks for playing 'About me' trivia! Your score is " + userScore + ".")
-            break;
-//    }   else if (userAnswer === "") {
-  //          alert("Please enter an answer.");
-    }   else {
-            alert("No, that's not one of them.")
-    }
-
-}
-
-    if (!guess) {
-        alert("Thanks for playing, but you're now out of guesses. All ten are Germany, Ireland, Barbados, South Africa, France, Vietnam, Scotland, Turkey, Jordan and Spain.")
-        alert("Thanks for playing 'About me' trivia! Your score is " + userScore + ".")
-    }
-
-
-
-/*
-for (let i = 0; i <= numGuessesFavC.length; i++){
-    alert("All ten are Germany, Ireland, Barbados, South Africa, France, Vietnam, Scotland, Turkey, Jordan and Spain.")
-}
-*/
-
+alert(`You've gotten ${userScore} questions right so far.`);
 
 //2.
-const userName = prompt("Great. That's it for the trivia on me. Now, what's your name?");
+
+const numCountriesCoachedIn = 22;
+
+for (let i = 1; i < 5; i++ ){
+  let userGuess = prompt("Guess how many different countries I've coached entrepreneurs from.");
+    if (userAnswer === " ") {
+      alert("Please enter a number.");
+    }
+  userGuess = Number(userGuess);
+    if( userGuess === numCountriesCoachedIn ) {
+      alert("That's right! You got it.");
+      userScore++;
+      break;
+    }
+    else if (userGuess > 22){
+      alert("Your guess is too high.");
+    }
+   else if (userGuess < 22){
+      alert("Your guess is too low.");
+    }
+}
+
+alert(`You've gotten ${userScore} questions right.`);
+
+//3.
+
+const top10countries = ["Germany", "Ireland", "Barbados", "South Africa", "France", "Vietnam", "Scotland", "Turkey", "Jordan", "Spain"];
+
+for (let i = 0; i < 6; i++) {
+  let userAnswer = prompt("Guess one of my Top 10 favorite countries that I've traveled to and worked in.")
+// Need help starting here.
+     if (userAnswer = top10countries[]);{
+       alert("That's correct!");
+       userScore++
+      break;
+  }
+    else (userAnswer !== top10countries{
+
+    }
+}
+
+alert("All ten are Germany, Ireland, Barbados, South Africa, France, Vietnam, Scotland, Turkey, Jordan and Spain.");
+alert("Thanks for playing 'About me' trivia! Your score is " + userScore + ".")
+// alert(`You've gotten ${userScore} questions right.`);
+
+const userName = prompt("That's it for the trivia on me. Now, what's your name?");
 alert("Welcome to my site, " + userName + ".");
 document.write("All that hard work on the prompts paid off, " + userName + ". Here is my About Me page.");
-
